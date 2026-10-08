@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>GravIn — Opções</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="options">
+  <main>
+    <h1>GravIn</h1>
+    <p class="lead">Grava a aba já recortada no tamanho do dispositivo selecionado no DevTools.</p>
+
+    <section>
+      <h2>Pasta de destino</h2>
+      <p>Atual: <strong id="folder">—</strong> <span id="permission" class="tag"></span></p>
+      <div class="actions">
+        <button id="choose" class="primary">Escolher pasta…</button>
+        <button id="reauthorize" hidden>Reautorizar pasta</button>
+        <button id="reset">Usar Downloads/GravIn</button>
+      </div>
+      <p class="hint">
+        Quando o Chrome perguntar, escolha <em>“Permitir em todas as visitas”</em> para não precisar
+        reautorizar a cada vez que abrir o navegador. Sem permissão, o vídeo cai em Downloads/GravIn.
+      </p>
+    </section>
+
+    <section>
+      <h2>Vídeo</h2>
+      <label>
+        Formato
+        <select id="format">
+          <option value="mp4">MP4 (H.264)</option>
+          <option value="webm">WebM (VP9)</option>
+        </select>
+      </label>
+      <label>
+        Resolução
+        <select id="scale">
+          <option value="auto">Automática (até 2× o tamanho CSS)</option>
+          <option value="1">1× (tamanho CSS, ex.: 390 × 844)</option>
+          <option value="native">Nativa do dispositivo (DPR completo)</option>
+        </select>
+      </label>
+    </section>
+
+    <section>
+      <h2>Como usar</h2>
+      <ol>
+        <li>Abra o DevTools (<kbd>F12</kbd>) e ative o modo dispositivo (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd>).</li>
+        <li>Selecione o dispositivo/resolução.</li>
+        <li>Clique no ícone do GravIn → <em>Iniciar gravação</em> (ou <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>).</li>
+        <li>Clique de novo para parar. O vídeo é salvo na pasta acima.</li>
+      </ol>
+    </section>
+
+    <p id="status" class="message"></p>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

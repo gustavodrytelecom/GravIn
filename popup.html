@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>GravIn</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <header>
+    <h1>GravIn</h1>
+    <a href="#" id="openOptions" title="Opções">⚙</a>
+  </header>
+
+  <section class="info">
+    <div class="row"><span>Viewport</span><strong id="viewport">—</strong></div>
+    <div class="row"><span>Vídeo</span><strong id="video">—</strong></div>
+    <div class="row"><span>Pasta</span><strong id="folder">—</strong></div>
+  </section>
+
+  <p id="warning" class="warning" hidden></p>
+
+  <button id="toggle" class="primary" disabled>Iniciar gravação</button>
+  <p id="message" class="message"></p>
+  <p class="hint">Atalho: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd></p>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
